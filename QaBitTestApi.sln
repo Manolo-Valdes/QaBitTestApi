@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QaBitTestApi", "QaBitTestApi.csproj", "{E5988F10-0FFC-40D6-BA4F-2E136A89FC42}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QaBitTestApi", "QaBitTestApi\QaBitTestApi.csproj", "{E5988F10-0FFC-40D6-BA4F-2E136A89FC42}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QaBitTestApiTests", "QaBitTestApiTests\QaBitTestApiTests.csproj", "{2EF6CFED-25F1-4A70-A6DC-464D6B89DB0D}"
 EndProject

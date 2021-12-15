@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\QaBitTestApi.csproj" />
+    <ProjectReference Include="..\QaBitTestApi\QaBitTestApi.csproj" />
   </ItemGroup>
 
 </Project>

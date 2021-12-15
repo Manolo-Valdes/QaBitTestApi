@@ -48,20 +48,31 @@ namespace QaBitTestApi.Controllers
         }
 
         // PUT api/Products/5
+        /// <summary>
+        /// Edits the selected Product identified by its id
+        /// </summary>
+        /// <param name="id"> Product ID</param>
+        /// <param name="values">json string with edited fields example: {"Stock":4,"Attributes":{"Color":"blue"}}</param>
+        /// <returns></returns>
         [HttpPut("{id}")]
         public IActionResult Put(int id, [FromBody] string values)
         {
             _logger.LogInformation("Editing product..");
             var product = _dbContext.Products.Include(p=> p.Attributes).First(a => a.Id == id);
-            JsonConvert.PopulateObject(values, product);
-
-            if (!TryValidateModel(product))
+            if (product == null)
+            {
                 return BadRequest();
+            }
+            JsonConvert.PopulateObject(values, product);
             _dbContext.SaveChanges();
             return Ok();
         }
 
         // DELETE api/Products/5
+        /// <summary>
+        /// Deletes the selected Product sending its id
+        /// </summary>
+        /// <param name="id"></param>
         [HttpDelete("{id}")]
         public void Delete(int id)
         {

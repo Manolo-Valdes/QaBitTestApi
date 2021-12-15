@@ -9,6 +9,12 @@
     <NoWarn>$(NoWarn);1591</NoWarn>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Remove="QaBitTestApiTests\**" />
+    <Content Remove="QaBitTestApiTests\**" />
+    <EmbeddedResource Remove="QaBitTestApiTests\**" />
+    <None Remove="QaBitTestApiTests\**" />
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.21" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.inMemory" Version="3.1.21" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
